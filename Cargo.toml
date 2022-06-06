@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "src/wicp",
+    "src/ball_coin",
+    "src/player_nft",
+    "src/ic-cdk-optimizer"
+]
