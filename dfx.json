@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "canisters": {
+    "player_nft": {
+      "type": "custom",
+      "candid": "src/player_nft/candid/player_nft.did",
+      "wasm": "target/wasm32-unknown-unknown/release/player_nft-opt.wasm",
+      "build": "sh build.sh player_nft"
+    },
+    "ball_coin": {
+      "type": "custom",
+      "candid": "src/ball_coin/ball_coin.did",
+      "wasm": "target/wasm32-unknown-unknown/release/ball_coin-opt.wasm",
+      "build": "sh build.sh ball_coin"
+    },
+    "wicp": {
+      "type": "custom",
+      "candid": "src/wicp/wicp.did",
+      "wasm": "target/wasm32-unknown-unknown/release/wicp-opt.wasm",
+      "build": "sh build.sh wicp"
+    },
+    "cap": {
+      "build": "echo",
+      "candid": "src/cap/cap.did",
+      "wasm": "src/cap/cap.wasm",
+      "type": "custom"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "bind": "ic0.app"
+    }
+  }
+}
